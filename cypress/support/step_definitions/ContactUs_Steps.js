@@ -52,3 +52,20 @@ When(
     cy.get("textarea[name='message']").type(word + number);
   }
 );
+
+When(
+  `I type a first name {word} and a last name {string}`,
+  (firstName, lastName) => {
+    cy.get("[name='first_name']").type(firstName);
+    cy.get("[name='last_name']").type(lastName);
+  }
+);
+
+When(`I type a {string} and a cooment {string}`, (email, comment) => {
+  cy.get("[name='email']").type(email);
+  cy.get("textarea[name='message']").type(comment);
+});
+
+Then("I should be presented with header text {string}", (message) => {
+  cy.xpath("//h1 | //body").contains(message);
+});
