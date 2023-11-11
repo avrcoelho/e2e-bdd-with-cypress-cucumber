@@ -9,3 +9,7 @@ Given(`I navigate to the webdriveruniversity homepage`, () => {
 When(`I click on contact us button`, () => {
   cy.get("#contact-us").invoke("removeAttr", "target").click({ force: true });
 });
+
+When(`I click on login portal button`, () => {
+  cy.get("#login-portal").invoke("removeAttr", "target").click({ force: true });
+});
