@@ -1,3 +1,4 @@
+@login @regression
 Feature: webdriveriversity - Login Page
 
   Scenario Outline: Validate valid & invalid login credentials

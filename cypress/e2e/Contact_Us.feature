@@ -1,3 +1,4 @@
+@contact-us @regression
 Feature: WebdriverUniversity - Contact Us Page
 
   # Execute befere each test - With that you can reduce duplications
@@ -36,6 +37,7 @@ Feature: WebdriverUniversity - Contact Us Page
     And I click on the submit button
     Then I should presented with a successful contact us submisson message
 
+  @smoke
   Scenario Outline: Validate contact us page
     And I type a first name <firstName> and a last name '<lastName>'
     And I type a '<emailAddress>' and a cooment '<comment>'
